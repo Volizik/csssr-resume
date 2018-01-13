@@ -1,0 +1,10 @@
+mixin checkbox(data)
+	+b('label').checkbox&attributes(attributes)
+		input(type="checkbox" data-check='#{data.checked}')
+		+e('span').btn
+		+e('span').label #{data.value}
+		- var anchor = data.anchor
+		- if (anchor !== undefined)
+			a(href='http://' + anchor)= anchor
+
+

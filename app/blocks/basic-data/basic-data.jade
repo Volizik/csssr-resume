@@ -1,0 +1,6 @@
+mixin basic-data(data)
+	+b.basic-data&attributes(attributes)
+		each item in data
+			+e('label').row
+				+e('span').key #{item.key}
+				+e('input').value(value="#{item.value}")

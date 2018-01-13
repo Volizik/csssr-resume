@@ -1,0 +1,37 @@
+extends ../blocks/layout-default/layout-default
+include ../blocks/section/section
+include ../blocks/subtitle/subtitle
+include ../blocks/description/description
+include ../blocks/skills/skills
+include ../blocks/scale/scale
+include ../blocks/about/about
+include ../blocks/list-radio/list-radio
+include ../blocks/footer/footer
+
+block head
+	- var pageTitle = 'Резюме';
+
+block content
+	+section()
+		+subtitle()
+			| Расскажите о себе чекбоксами
+		+description()
+			| Здесь отмечены чекбоксами пункты, которые соответсвуют моим скилам.
+		+skills(getData('skills'))
+	+section()
+		+subtitle()
+			| Уровень владения JavaScript
+		+scale()
+	+section()
+		+subtitle()
+			| Расскажите о себе словами
+		+description()
+			| Пару слов обо мне
+		+about(getData('about'))
+	+section()
+		+subtitle()
+			| Планы на будущее
+		+description()
+			| Планы в будущем могут поменятся! :)
+		+list-radio(getData('future-plans'))
+	+footer()

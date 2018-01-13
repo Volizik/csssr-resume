@@ -1,0 +1,7 @@
+include ../checkbox/checkbox
+
+mixin skills(data)
+	+b.skills&attributes(attributes)
+		each item in data
+			+e.row
+				+checkbox(item)
